@@ -1,0 +1,4 @@
+<h1><%= @post.title %></h1>
+<h5>by <%= @post.author.email %> - <%= @post.created_at.to_s(:short) %></h5>
+
+<p><%= @post.body %></p>
