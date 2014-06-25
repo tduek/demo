@@ -6,7 +6,7 @@ development:
   username: TD
   password:
 
-development:
+test:
   adapter: postgresql
   encoding: unicode
   database: demo-test
