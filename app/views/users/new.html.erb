@@ -7,9 +7,15 @@
 
   <label for="user_email">Email</label>
   <input id="user_email" type="text" name="user[email]" value="<%= @user.email %>">
+  <br>
 
-  <label for="user_picture">Avatar</label>
+  <label for="user_password">Password</label>
+  <input type="password" name="user[password]">
+  <br>
+
+  <label for="user_picture">Profile pic</label>
   <input id="user_picture" type="file" name="user[picture]">
+  <br>
 
   <input type="submit" value="Create!">
 </form>

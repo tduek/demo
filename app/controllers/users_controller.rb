@@ -1,11 +1,18 @@
 class UsersController < ApplicationController
+  before_action :require_signed_in!, :only => [:show]
+  before_action :require_signed_out!, :only => [:create, :new]
+
 
   def index
     @users = User.all
   end
 
   def show
-    @user = User.find(params[:id])
+    if params.include?(:id)
+      @user = User.find(params[:id])
+    else
+      @user = current_user
+    end
   end
 
   def new
@@ -16,6 +23,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      sign_in(@user)
       flash[:success] = "Created account successfully! Welcome #{ @user.email }"
       redirect_to @user
     else
@@ -28,7 +36,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, :picture)
+    params.require(:user).permit(:email, :password, :password_confirmation, :picture)
   end
 
 end

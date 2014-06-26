@@ -2,9 +2,14 @@ source 'https://rubygems.org'
 
 gem 'pg'
 
-gem "paperclip", "~> 4.1"
+gem 'paperclip', '~> 4.1'
 gem 'aws-sdk', '~> 1.5.7'
-gem "figaro"
+gem 'figaro'
+
+gem 'bcrypt'
+
+gem 'omniauth-facebook'
+
 
 
 # Rails stuff
