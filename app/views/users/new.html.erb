@@ -1,0 +1,15 @@
+<h1>User.new up in here!</h1>
+
+<form action="<%= users_url %>" method="post" enctype="multipart/form-data">
+  <input type="hidden"
+         name="authenticity_token"
+         value="<%= form_authenticity_token %>">
+
+  <label for="user_email">Email</label>
+  <input id="user_email" type="text" name="user[email]" value="<%= @user.email %>">
+
+  <label for="user_picture">Avatar</label>
+  <input id="user_picture" type="file" name="user[picture]">
+
+  <input type="submit" value="Create!">
+</form>
