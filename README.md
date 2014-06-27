@@ -44,4 +44,21 @@ Tommy's Terrifyingly Tender Tech Talks
 [aws]: http://aws.amazon.com/
 [s3]: http://aws.amazon.com/s3/
 
+## 2. Log in with Facebook!
+
+- Create a new app at [Facebook Developers][fb-devs]
+  - Go to Settings > Advanced
+    - Whitelist your Oauth redirect URIs in the "Valid OAuth redirect URIs"
+      - You should put `localhost:3000` and your Heroku url in there.
+- Check out:
+  - Gemfile: `gem ['omniauth-facebook'][oauth-fb]`
+  - `config/initializers/omniauth.rb`
+  - `config/routes.rb`
+  - `app/views/sessions/new.html.rb`
+  - `app/controllers/oauth_callbacks.rb`
+  - `app/models/user.rb`
+
+[Omniauth-facebook][oauth-fb]
+[omniauth-fb]: https://github.com/mkdynamic/omniauth-facebook
+[fb-devs]: http://developers.facebook.com
 
