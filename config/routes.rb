@@ -8,6 +8,4 @@ Demo::Application.routes.draw do
 
   resource :session, :only => [:create, :destroy, :new]
 
-  get '/auth/facebook/callback', to: 'sessions#facebook_login'
-
 end

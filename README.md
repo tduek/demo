@@ -22,6 +22,26 @@ Tommy's Terrifyingly Tender Tech Talks
         0. `heroku keys:add` to generate a new SSH key, and push them up to your Heroku account.
         0. Retry
 
-## 1. Paperclip and Figaro
+## 1. [Paperclip][paperclip] and [Figaro][figaro]
+
+- [Paperclip][paperclip]
+  0. `gem 'paperclip'` and `gem 'aws-sdk'`
+  0. Sign up for [AWS][aws], create an [S3][s3] bucket
+    - Make sure you set the region to "US Standard"
+  0. Check out:
+    - `app/models/user.rb`
+    - `config/application.rb`
+    - `app/views/users/new.html.erb`
+      - `<form enctype="multipart/form-data">`
+- [Figaro][figaro]
+  - `gem 'figaro'`
+  - `rails generate figaro:install`
+  - `rake figaro:heroku`
+  - `ENV['KEY_NAME']`
+
+[figaro]: https://github.com/laserlemon/figaro
+[paperclip]: https://github.com/thoughtbot/paperclip
+[aws]: http://aws.amazon.com/
+[s3]: http://aws.amazon.com/s3/
 
 

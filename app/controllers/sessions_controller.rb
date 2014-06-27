@@ -3,16 +3,8 @@ class SessionsController < ApplicationController
   before_action :require_signed_in!, :only => [:destroy]
 
   def new
+
   end
-
-  def facebook_login
-    user = User.find_or_create_by_auth_hash(request.env['omniauth.auth'])
-    sign_in(user)
-
-    flash[:success] = "Logged in with facebook!"
-    redirect_to user
-  end
-
 
   def create
     @user = User.find_by_credentials(

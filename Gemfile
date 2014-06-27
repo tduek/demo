@@ -8,7 +8,6 @@ gem 'figaro'
 
 gem 'bcrypt'
 
-gem 'omniauth-facebook'
 
 
 
