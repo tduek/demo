@@ -51,14 +51,13 @@ Tommy's Terrifyingly Tender Tech Talks
     - Whitelist your Oauth redirect URIs in the "Valid OAuth redirect URIs"
       - You should put `localhost:3000` and your Heroku url in there.
 - Check out:
-  - Gemfile: `gem ['omniauth-facebook'][oauth-fb]`
+  - Gemfile: [`gem 'omniauth-facebook'`][oauth-fb]
   - `config/initializers/omniauth.rb`
   - `config/routes.rb`
   - `app/views/sessions/new.html.rb`
   - `app/controllers/oauth_callbacks.rb`
   - `app/models/user.rb`
 
-[Omniauth-facebook][oauth-fb]
-[omniauth-fb]: https://github.com/mkdynamic/omniauth-facebook
+[oauth-fb]: https://github.com/mkdynamic/omniauth-facebook
 [fb-devs]: http://developers.facebook.com
 
