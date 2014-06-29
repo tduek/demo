@@ -10,4 +10,6 @@ Demo::Application.routes.draw do
 
   get '/auth/facebook/callback', to: 'oauth_callbacks#facebook'
 
+  get '/search', to: 'static_pages#search', as: :search
+
 end

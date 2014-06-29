@@ -1,0 +1,20 @@
+<h1>Search!</h1>
+
+<form action="<%= search_url %>" method="get">
+
+  <input type="text" name="query" value="<%= params[:query] %>">
+
+  <input type="submit" value="Search!">
+</form>
+
+<%= paginate @results %>
+
+<ul>
+  <% @results.map(&:searchable).each do |result| %>
+
+  <li><%= render result %></li>
+
+  <% end %>
+</ul>
+
+<%= paginate @results %>

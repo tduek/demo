@@ -72,6 +72,9 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.1)
     jwt (1.0.0)
+    kaminari (0.16.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -105,6 +108,10 @@ GEM
       cocaine (~> 0.5.3)
       mime-types
     pg (0.17.1)
+    pg_search (0.7.4)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
     polyglot (0.3.5)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -174,9 +181,11 @@ DEPENDENCIES
   figaro
   jbuilder (~> 1.2)
   jquery-rails
+  kaminari
   omniauth-facebook
   paperclip (~> 4.1)
   pg
+  pg_search
   rails (= 4.0.2)
   rails_12factor
   sass-rails (~> 4.0.0)

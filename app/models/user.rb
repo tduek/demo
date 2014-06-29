@@ -12,24 +12,13 @@ class User < ActiveRecord::Base
 
   before_validation :ensure_session_token
 
+  include PgSearch
+  pg_search_scope :search_on_email, against: :email
+  multisearchable against: :email
+
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     user.try(:is_password?, password) ? user : nil
-  end
-
-  def self.find_or_create_by_fb_auth_hash(auth_hash)
-    user = self.find_by(uid: auth_hash[:uid], provider: auth_hash[:provider])
-
-    unless user
-      user = self.create!(
-        uid: auth_hash[:uid],
-        provider: auth_hash[:provider],
-        email: auth_hash[:info][:email],
-        password_digest: SecureRandom::urlsafe_base64(16)
-      )
-    end
-
-    user
   end
 
   def self.generate_session_token

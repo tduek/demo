@@ -10,6 +10,9 @@ gem 'bcrypt'
 
 gem 'omniauth-facebook'
 
+gem 'pg_search'
+gem 'kaminari'
+
 
 
 # Rails stuff
