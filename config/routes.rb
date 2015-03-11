@@ -1,8 +1,8 @@
 Demo::Application.routes.draw do
 
-  root to: "static_pages#root" #'users#index'
+  root to: 'users#index' # "static_pages#root" #'users#index'
 
-  resources :users, only: [:index, :show]
+  resources :users
 
   resources :posts, only: :show
 

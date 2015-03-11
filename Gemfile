@@ -21,3 +21,7 @@ end
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem "backbone-on-rails"
+
+gem "paperclip", "~> 4.2"
+gem "aws-sdk"
+gem "figaro"
