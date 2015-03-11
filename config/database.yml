@@ -3,13 +3,3 @@ development:
   encoding: unicode
   database: demo-dev
   host: localhost
-  username: TD
-  password:
-
-development:
-  adapter: postgresql
-  encoding: unicode
-  database: demo-test
-  host: localhost
-  username: TD
-  password:
