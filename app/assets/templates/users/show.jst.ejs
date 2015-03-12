@@ -1,0 +1,11 @@
+<h1><%= model.escape("email") %></h1>
+
+<section>
+	<% model.posts().each(function (post) { %>
+		<article>
+			<h3><%= post.escape("title") %></h3>
+
+			<p><%= post.escape("body") %></p>
+		</article>
+	<% }) %>
+</section>
