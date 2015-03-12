@@ -9,6 +9,13 @@ Demo.Routers.MainRouter = Backbone.Router.extend({
 		"users/new": "userNew",
 		"users/:id": "userShow",
 		"users/:id/edit": "userEdit",
+		"search": "search",
+	},
+
+	search: function () {
+		var view = new Demo.Views.Search();
+
+		this._swapView(view);
 	},
 
 	usersIndex: function () {

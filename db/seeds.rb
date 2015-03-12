@@ -17,4 +17,17 @@
     )
   end
 
+  if i % 15 == 0
+    user.authored_posts.create!(
+      title: "Really rare post",
+      body: "Try to find me"
+    )
+  end
+
 end
+
+u = User.create! email: "rare@user.com"
+u.authored_posts.create!(
+  title: "Rare user's first post",
+  body: "NaNNaNNaNNaNNaNNaN Batman!"
+)
