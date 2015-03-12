@@ -1,6 +1,6 @@
 Demo::Application.routes.draw do
 
-  root to: 'users#index' # "static_pages#root" #'users#index'
+  root to: "static_pages#root" #'users#index'
 
   resources :users
 

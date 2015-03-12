@@ -5,6 +5,7 @@ Demo.Routers.MainRouter = Backbone.Router.extend({
 	},
 
 	routes: {
+		"": "usersIndex",
 		"users": "usersIndex",
 		"users/new": "userNew",
 		"users/:id": "userShow",
@@ -29,13 +30,14 @@ Demo.Routers.MainRouter = Backbone.Router.extend({
 
 	userNew: function () {
 		var view = new Demo.Views.UserForm({
-			model: new Demo.Models.User()
+			model: new Demo.Models.User(),
+			collection: Demo.allUsers
 		});
 
 		this._swapView(view);
 	},
 
-	userEdit: function () {
+	userEdit: function (id) {
 		var view = new Demo.Views.UserForm({
 			model: Demo.allUsers.get(id)
 		});
