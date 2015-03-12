@@ -1,0 +1,26 @@
+<h1>
+	<% if (model.isNew()) { %>
+		New User!
+	<% } else { %>
+		Edit User!
+	<% } %>
+</h1>
+
+
+<label>
+	Email
+	<input type="email" name="email" value="<%= model.escape("email") %>">
+</label>
+
+<br>
+
+<label>
+	Picture
+	<input id="input-picture-file" type="file" name="picture">
+</label>
+
+<br>
+
+<input type="submit" value="Save!">
+
+<img src="" id="picture-preview">
