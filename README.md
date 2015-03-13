@@ -11,3 +11,8 @@
 - [`api/static_pages_controller`](./app/controllers/api/static_pages_controller.rb)
 - [`search.jst.ejs`](./app/assets/templates/search.jst.ejs)
   - You should probably have subviews instead of just iterating over the `search_results` in the template
+
+## Pagination w/ [Kaminari][kaminari] and infinite scroll
+[kaminari]: https://github.com/amatsuda/kaminari
+
+Look at the same files as the PgSearch demo.

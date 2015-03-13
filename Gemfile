@@ -22,4 +22,5 @@ end
 
 gem "backbone-on-rails"
 
-gem 'pg_search'
+gem "pg_search"
+gem "kaminari"
