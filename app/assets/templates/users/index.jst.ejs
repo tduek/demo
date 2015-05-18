@@ -1,11 +1,4 @@
 <h1>Users Index (backbone)</h1>
 
-<ul>
-	<% collection.each(function (user) { %>
-		<li>
-			<a href="#/users/<%= user.id %>">
-				<%= user.escape("email") %>
-			</a>
-		</li>
-	<% }) %>
-</ul>
+<%= users.length %> users
+<ul id="users"></ul>

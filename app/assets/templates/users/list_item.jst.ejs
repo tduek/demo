@@ -1,0 +1,7 @@
+<h3>
+	<a href="#/users/<%= user.id %>"><%= user.escape("email") %></a>
+</h3>
+
+<p>
+	Joined at <time><%= user.get("created_at") %></time>
+</p>

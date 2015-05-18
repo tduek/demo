@@ -1,7 +1,7 @@
 class Api::UsersController < ApplicationController
 
   def index
-    @users = User.all
+    @users = User.includes(:authored_posts).all
   end
 
   def show

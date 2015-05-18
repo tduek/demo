@@ -5,16 +5,31 @@ Demo.Routers.MainRouter = Backbone.Router.extend({
 	},
 
 	routes: {
+		"": "usersIndex",
 		"users": "usersIndex",
+		"posts": "postsIndex",
 		"users/new": "userNew",
 		"users/:id": "userShow",
 		"users/:id/edit": "userEdit",
+		"search": "search"
+	},
+
+	search: function () {
+		var view = new Demo.Views.Search();
+
+		this._swapView(view);
 	},
 
 	usersIndex: function () {
 		var view = new Demo.Views.UsersIndex({
 			collection: Demo.allUsers
 		});
+
+		this._swapView(view);
+	},
+
+	postsIndex: function () {
+		var view = new Demo.Views.PostsIndex();
 
 		this._swapView(view);
 	},

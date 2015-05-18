@@ -1,0 +1,6 @@
+<h2><%= post.escape("title") %></h2>
+<h5>
+	Written on <time><%= post.get("created_at") %></time>
+</h5>
+
+<p><%= post.escape("body") %></p>
