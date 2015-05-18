@@ -1,1 +1,3 @@
 json.extract! post, :id, :title, :body, :author_id, :created_at
+
+json._type "Post"

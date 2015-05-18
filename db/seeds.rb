@@ -20,7 +20,7 @@
 end
 
 me = User.create!(email: "tommy@appacademy.io")
-me.posts.create!(
+me.authored_posts.create!(
   title: "tommy's first post",
   body: "very rare post"
 )
